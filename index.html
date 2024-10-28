@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin Music Player</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0e1126;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            transition: background-color 0.6s ease;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            position: relative;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .music-list, .player {
+            flex: 1;
+            padding: 20px;
+            transition: all 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+        }
+
+        .music-list {
+            background: linear-gradient(145deg, #16283b, #0f1a26);
+            box-shadow: inset 4px 4px 8px #0c1621, inset -4px -4px 8px #1a3251;
+            border-radius: 10px 0 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .music-list h2 {
+            font-size: 1.8rem;
+            color: #1cb0f6;
+            margin-bottom: 20px;
+            font-weight: 600;
+            transition: transform 0.5s ease;
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        li {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: #1b2d44;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.4s ease, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li:hover {
+            background-color: #e63946;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        .player {
+            background: linear-gradient(145deg, #1c3152, #0e1d33);
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .album-art {
+            width: 300px;
+            height: 300px;
+            background-color: #333;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        #now-playing {
+            font-size: 1.5rem;
+            color: #e63946;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: opacity 0.5s ease;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #1cb0f6;
+            border: none;
+            color: #fff;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: transform 0.4s ease, background-color 0.4s;
+        }
+
+        .button:hover {
+            background-color: #e63946;
+            transform: scale(1.15);
+        }
+
+        .progress-container, .volume-container {
+            width: 80%;
+            margin: 15px 0;
+            background: #324a70;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress, .volume {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+
+        .progress::-webkit-slider-thumb, .volume::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background-color: #1cb0f6;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #1cb0f6;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+
+        .progress::-webkit-slider-thumb:hover, .volume::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            background-color: #e63946;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="music-list active" id="music-list-section">
+            <h2>Danh sách nhạc</h2>
+            <ul id="music-list"></ul>
+        </section>
+
+        <section class="player" id="player-section">
+            <div id="now-playing" class="now-playing">Không có bài nhạc nào</div>
+            <div class="album-art" id="album-art"></div>
+            <audio id="audio-player"></audio>
+
+            <div class="controls">
+                <button class="button" id="rewind-button">⏪</button>
+                <button class="button" id="play-pause-button">▶️</button>
+                <button class="button" id="forward-button">⏩</button>
+            </div>
+
+            <div class="progress-container">
+                <input type="range" id="progress-bar" class="progress" value="0" min="0" max="100">
+            </div>
+
+            <div class="volume-container">
+                <input type="range" id="volume-control" class="volume" value="100" min="0" max="100">
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
