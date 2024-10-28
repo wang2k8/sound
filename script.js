@@ -1,8 +1,8 @@
 // Danh sách bài nhạc
 const musicList = [
     { title: "Việt Nam Tôi - Anh Vu Remix", src: "ms/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "ms/cover1.jpg" },
-    { title: "Mama Boy Remix", src: "ms/Mama Boy Remix.mp3", cover: "ms/cover2.jpg" },
-    { title: "Bài Nhạc 3", src: "ms/song3.mp3", cover: "pic/pic1.jpg" },
+    { title: "Mama Boy - Anh Vu Remix", src: "ms/Mama Boy Remix.mp3", cover: "ms/cover2.jpg" },
+    { title: "MONG-YU-FT-CLME- DUCTU REMIX", src: "ms/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic1.jpg" },
     { title: "Bài Nhạc 4", src: "ms/song4.mp3", cover: "pic/pic2.jpg" },
     { title: "Bài Nhạc 5", src: "ms/song5.mp3", cover: "ms/cover5.jpg" },
     { title: "Bài Nhạc 6", src: "ms/song6.mp3", cover: "ms/cover6.jpg" },
