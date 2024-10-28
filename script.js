@@ -1,6 +1,22 @@
 const musicList = [
-    { title: "Mama Boy Remix", file: "music/Mama Boy Remix.mp3", cover: "covers/BaiHat1.jpg" },
-    { title: "BaiHat2", file: "music/BaiHat2.mp3", cover: "covers/BaiHat2.jpg" },
+    { title: "Mama Boy - AnhVu Remix", file: "music/Mama Boy Remix.mp3", cover: "covers/BaiHat1.jpg" },
+    { title: "Lên Đàng x Thanh Niên Tiếp Bước - AnhVu Remix", file: "music/Len Dang x Thanh Nien Tiep Buoc.mp3", cover: "covers/BaiHat2.jpg" },
+    { title: "Việt Nam Tôi - Anh Vu Remix", file: "music/Việt Nam Tôi - Anh Vu Remix.mp3" }
+    { title: "MONG-YU-FT-CLME- DUCTU REMIX", file: "music/MONG-YU-FT-CLME- DUCTU REMIX.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
+    { title: "BaiHat3", file: "music/BaiHat3.mp3" }
     { title: "BaiHat3", file: "music/BaiHat3.mp3" }
 ];
 
