@@ -1,22 +1,11 @@
 // Danh sách bài nhạc
 const musicList = [
-    { title: "Việt Nam Tôi - Anh Vu Remix", src: "ms/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "pic/pic1.png" },
-    { title: "Mama Boy - Anh Vu Remix", src: "ms/Mama Boy Remix.mp3", cover: "pic/pic2.png" },
-    { title: "MONG-YU-FT-CLME- DUCTU REMIX", src: "ms/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
-    { title: "Bài Nhạc 4", src: "ms/song4.mp3", cover: "pic/pic4.png" },
-    { title: "Việt Nam Tôi - Anh Vu Remix", src: "ms/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "pic/pic1.png" },
-    { title: "Mama Boy - Anh Vu Remix", src: "ms/Mama Boy Remix.mp3", cover: "pic/pic2.png" },
-    { title: "MONG-YU-FT-CLME- DUCTU REMIX", src: "ms/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
-    { title: "Bài Nhạc 4", src: "ms/song4.mp3", cover: "pic/pic4.png" },
-    { title: "Việt Nam Tôi - Anh Vu Remix", src: "ms/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "pic/pic1.png" },
-    { title: "Mama Boy - Anh Vu Remix", src: "ms/Mama Boy Remix.mp3", cover: "pic/pic2.png" },
-    { title: "MONG-YU-FT-CLME- DUCTU REMIX", src: "ms/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
-    { title: "Bài Nhạc 4", src: "ms/song4.mp3", cover: "pic/pic4.png" },
-    { title: "Việt Nam Tôi - Anh Vu Remix", src: "ms/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "pic/pic1.png" },
-    { title: "Mama Boy - Anh Vu Remix", src: "ms/Mama Boy Remix.mp3", cover: "pic/pic2.png" },
-    { title: "MONG-YU-FT-CLME- DUCTU REMIX", src: "ms/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
-    { title: "Bài Nhạc 4", src: "ms/song4.mp3", cover: "pic/pic4.png" },
-    { title: "Bài Nhạc 5", src: "ms/song5.mp3", cover: "pic/pic5.png" },
+    { title: "Việt Nam Tôi - Anh Vu Remix", src: "music/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "pic/picvn.png" },
+    { title: "Mama Boy - Anh Vu Remix", src: "music/Mama Boy Remix.mp3", cover: "pic/pic2.png" },
+    { title: "MONG-YU-FT-CLME- DUCTU REMIX", src: "music/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
+    { title: "Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn", src: "music/Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn.mp3", cover: "pic/pic4.png" },
+    { title: "Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix)", src: "music/Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix).mp3", cover: "pic/pic5.png" },
+    { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pic1.png" },
     // Add more songs as needed
 ];
 
