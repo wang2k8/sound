@@ -6,6 +6,8 @@ const musicList = [
     { title: "Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn", src: "music/Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn.mp3", cover: "pic/pic4.png" },
     { title: "Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix)", src: "music/Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix).mp3", cover: "pic/pic5.png" },
     { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pichehe.png" },
+    { title: "[DUCBUI REMIX] ÔI MẤT RÌU", src: "music/[DUCBUI REMIX] ÔI MẤT RÌU (2).mp3", cover: "pic/de-tao-tien-may-ve-voi-dat-cam-riu.jpg" },
+    { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pichehe.png" },
     // Add more songs as needed
 ];
 
