@@ -12,8 +12,8 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #020126; /* Nền tối */
-    color: #1BF2DD; /* Màu xanh nhạt */
+    background-color: #2c3e50;
+    color: #ecf0f1;
     min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@
 .music-list h2 {
     margin-bottom: 10px;
     font-size: 28px;
-    color: #F20574; /* Hồng đậm */
+    color: #e74c3c; /* Đỏ son */
 }
 
 /* Thanh tìm kiếm và sắp xếp */
@@ -36,15 +36,15 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid #F2059F; /* Hồng tươi */
+    border: 2px solid #e74c3c; /* Đỏ son */
     border-radius: 4px;
-    background-color: #0C0A40; /* Xanh đậm */
-    color: #1BF2DD;
+    background-color: #34495e;
+    color: #ecf0f1;
     transition: border 0.3s;
 }
 
 #search-bar:focus {
-    border-color: #1BF2DD; /* Xanh nhạt khi được chọn */
+    border-color: #1abc9c; /* Màu xanh lá khi được chọn */
     outline: none;
 }
 
@@ -52,10 +52,10 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 2px solid #F2059F;
+    border: 2px solid #e74c3c; /* Đỏ son */
     border-radius: 4px;
-    background-color: #0C0A40;
-    color: #1BF2DD;
+    background-color: #34495e;
+    color: #ecf0f1;
 }
 
 /* Hộp chứa danh sách nhạc */
@@ -63,8 +63,8 @@
     max-height: 130px;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #0C0A40 #020126;
-    background-color: #0C0A40;
+    scrollbar-color: #34495e #2c3e50;
+    background-color: #34495e;
     border-radius: 4px;
     padding: 10px;
 }
@@ -75,12 +75,12 @@
 }
 
 .music-box::-webkit-scrollbar-thumb {
-    background-color: #F20574; /* Hồng đậm */
+    background-color: #e74c3c; /* Đỏ son */
     border-radius: 4px;
 }
 
 .music-box::-webkit-scrollbar-track {
-    background-color: #020126;
+    background-color: #2c3e50;
 }
 
 /* Danh sách các bài nhạc */
@@ -95,14 +95,14 @@
 #music-list li {
     padding: 10px;
     cursor: pointer;
-    color: #1BF2DD;
+    color: #ecf0f1;
     transition: background 0.3s, transform 0.2s;
     border-radius: 4px;
 }
 
 #music-list li:hover {
-    background-color: #F20574; /* Hồng đậm */
-    transform: scale(1.05);
+    background-color: #e74c3c; /* Đỏ son */
+    transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
 }
 
 /* Phần trình phát nhạc */
@@ -111,22 +111,22 @@
     max-width: 400px;
     text-align: center;
     padding: 20px;
-    background-color: #0C0A40;
+    background-color: #34495e;
     border-radius: 8px;
     margin-top: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
 }
 
 /* Ảnh bìa album */
 .album-art {
     width: 150px;
     height: 150px;
-    background-color: #020126;
+    background-color: #2c3e50;
     margin: 0 auto 20px;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
-    border: 2px solid #F2059F;
+    border: 2px solid #e74c3c; /* Đỏ son */
 }
 
 /* Thông tin bài nhạc */
@@ -137,7 +137,7 @@
 .track-title {
     font-size: 20px;
     font-weight: bold;
-    color: #F20574;
+    color: #e74c3c; /* Đỏ son */
 }
 
 /* Nút điều khiển */
@@ -151,19 +151,19 @@
 .button {
     padding: 10px;
     font-size: 18px;
-    background-color: #1BF2DD; /* Xanh nhạt */
+    background-color: #1abc9c; /* Màu xanh lá */
     border: none;
     border-radius: 50%;
-    color: #020126;
+    color: #ecf0f1;
     cursor: pointer;
     width: 50px;
     height: 50px;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s; /* Thêm hiệu ứng khi nhấn */
 }
 
 .button:hover {
-    background-color: #F2059F;
-    transform: scale(1.1);
+    background-color: #16a085; /* Màu xanh đậm hơn khi hover */
+    transform: scale(1.1); /* Tăng kích thước khi hover */
 }
 
 /* Thanh tiến trình phát nhạc */
@@ -179,7 +179,7 @@
     appearance: none;
     width: 100%;
     height: 6px;
-    background-color: #020126;
+    background-color: #2c3e50;
     border-radius: 4px;
     outline: none;
     transition: background 0.3s;
@@ -187,17 +187,17 @@
 
 .progress::-webkit-slider-thumb {
     appearance: none;
-    width: 12px;
+    width: 12px; /* Tăng kích thước nút kéo */
     height: 12px;
     border-radius: 50%;
-    background-color: #F20574;
+    background-color: #e74c3c; /* Đỏ son */
     cursor: pointer;
 }
 
 /* Hiển thị thời gian phát nhạc hiện tại */
 #current-time {
     font-size: 14px;
-    color: #1BF2DD;
+    color: #bdc3c7;
 }
 
 /* Thanh âm lượng */
@@ -212,21 +212,21 @@
     appearance: none;
     width: 100%;
     height: 6px;
-    background-color: #020126;
+    background-color: #2c3e50;
     border-radius: 4px;
     outline: none;
 }
 
 .volume::-webkit-slider-thumb {
     appearance: none;
-    width: 12px;
+    width: 12px; /* Tăng kích thước nút kéo */
     height: 12px;
     border-radius: 50%;
-    background-color: #F20574;
+    background-color: #e74c3c; /* Đỏ son */
     cursor: pointer;
 }
 
 #volume-value {
     font-size: 14px;
-    color: #1BF2DD;
+    color: #bdc3c7;
 }
