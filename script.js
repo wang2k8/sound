@@ -8,7 +8,7 @@ const musicList = [
     { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pichehe.png" },
     { title: "[DUCBUI REMIX] ÔI MẤT RÌU", src: "music/[DUCBUI REMIX] ÔI MẤT RÌU (2).mp3", cover: "pic/de-tao-tien-may-ve-voi-dat-cam-riu.jpg" },
     { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
-    // Add more songs as needed
+    // Thêm nhiều bài nhạc nếu cần
 ];
 
 // Khởi tạo các biến
@@ -22,6 +22,9 @@ const volumeControl = document.getElementById('volume-control');
 const searchBar = document.getElementById('search-bar');
 const currentTimeDisplay = document.getElementById('current-time');
 const volumeValueDisplay = document.getElementById('volume-value');
+const rewindButton = document.getElementById('rewind-button');
+const fastForwardButton = document.getElementById('fast-forward-button');
+
 let currentTrackIndex = -1;
 
 // Tạo danh sách bài nhạc
@@ -99,6 +102,20 @@ progressBar.oninput = () => {
 volumeControl.oninput = () => {
     audioPlayer.volume = volumeControl.value / 100;
     volumeValueDisplay.textContent = `${volumeControl.value}%`;
+};
+
+// Tua lùi 10 giây
+rewindButton.onclick = () => {
+    audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10); // Không để currentTime < 0
+};
+
+// Tua tới 10 giây
+fastForwardButton.onclick = () => {
+    if (audioPlayer.currentTime + 10 < audioPlayer.duration) {
+        audioPlayer.currentTime += 10; // Tua tới 10 giây
+    } else {
+        audioPlayer.currentTime = audioPlayer.duration; // Đặt về cuối bài nếu vượt quá
+    }
 };
 
 // Tự động phát bài nhạc tiếp theo
