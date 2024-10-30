@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhạc Thk Wang Nghe</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png"> <!-- Thêm thẻ favicon -->
 </head>
 <body>
     <div class="container">
@@ -17,37 +18,35 @@
                 <option value="artist">Sort by Artist</option>
                 <option value="album">Sort by Album</option>
             </select>
-            <!-- Hộp chứa danh sách nhạc với khả năng cuộn -->
             <div class="music-box">
                 <ul id="music-list">
                     <!-- Danh sách bài nhạc sẽ được JavaScript tạo -->
                 </ul>
             </div>
         </section>
-        
+
         <!-- Trình phát nhạc -->
         <section class="player" id="player-section">
             <div class="album-art default" id="album-art"></div>
-            
+
             <div class="track-info">
                 <div id="track-title" class="track-title">Tên bài hát</div>
             </div>
 
             <!-- Điều khiển phát nhạc -->
-            <audio id="audio-player"></audio>
+            <audio id="audio-player" autoplay></audio> <!-- Thêm autoplay -->
+
             <div class="controls">
-                <button class="button" id="rewind-button">◁◁</button>
+                <button class="button" id="rewind-button">◁◁</button> <!-- Thay đổi nút tua lùi -->
                 <button class="button" id="play-pause-button">▶</button>
-                <button class="button" id="forward-button">▷▷</button>
+                <button class="button" id="fast-forward-button">▷▷</button> <!-- Thay đổi nút tua tới -->
             </div>
 
-            <!-- Thanh tiến trình phát nhạc -->
             <div class="progress-container">
                 <input type="range" id="progress-bar" class="progress" value="0" min="0" max="100">
                 <span id="current-time">0:00</span>
             </div>
 
-            <!-- Thanh âm lượng -->
             <div class="volume-container">
                 <input type="range" id="volume-control" class="volume" value="100" min="0" max="100">
                 <span id="volume-value">100%</span>
