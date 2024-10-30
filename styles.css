@@ -1,0 +1,232 @@
+/* Đặt lại CSS cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Định dạng phần chứa */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #020126; /* Nền tối */
+    color: #1BF2DD; /* Màu xanh nhạt */
+    min-height: 100vh;
+}
+
+/* Phần danh sách nhạc */
+.music-list {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.music-list h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #F20574; /* Hồng đậm */
+}
+
+/* Thanh tìm kiếm và sắp xếp */
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #F2059F; /* Hồng tươi */
+    border-radius: 4px;
+    background-color: #0C0A40; /* Xanh đậm */
+    color: #1BF2DD;
+    transition: border 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #1BF2DD; /* Xanh nhạt khi được chọn */
+    outline: none;
+}
+
+#sort-options {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #F2059F;
+    border-radius: 4px;
+    background-color: #0C0A40;
+    color: #1BF2DD;
+}
+
+/* Hộp chứa danh sách nhạc */
+.music-box {
+    max-height: 130px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #0C0A40 #020126;
+    background-color: #0C0A40;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Tùy chỉnh thanh cuộn */
+.music-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.music-box::-webkit-scrollbar-thumb {
+    background-color: #F20574; /* Hồng đậm */
+    border-radius: 4px;
+}
+
+.music-box::-webkit-scrollbar-track {
+    background-color: #020126;
+}
+
+/* Danh sách các bài nhạc */
+#music-list {
+    max-height: 120px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#music-list li {
+    padding: 10px;
+    cursor: pointer;
+    color: #1BF2DD;
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 4px;
+}
+
+#music-list li:hover {
+    background-color: #F20574; /* Hồng đậm */
+    transform: scale(1.05);
+}
+
+/* Phần trình phát nhạc */
+.player {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    background-color: #0C0A40;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ảnh bìa album */
+.album-art {
+    width: 150px;
+    height: 150px;
+    background-color: #020126;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #F2059F;
+}
+
+/* Thông tin bài nhạc */
+.track-info {
+    margin-bottom: 15px;
+}
+
+.track-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F20574;
+}
+
+/* Nút điều khiển */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #1BF2DD; /* Xanh nhạt */
+    border: none;
+    border-radius: 50%;
+    color: #020126;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #F2059F;
+    transform: scale(1.1);
+}
+
+/* Thanh tiến trình phát nhạc */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.progress {
+    flex-grow: 1;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: #020126;
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #F20574;
+    cursor: pointer;
+}
+
+/* Hiển thị thời gian phát nhạc hiện tại */
+#current-time {
+    font-size: 14px;
+    color: #1BF2DD;
+}
+
+/* Thanh âm lượng */
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume {
+    flex-grow: 1;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: #020126;
+    border-radius: 4px;
+    outline: none;
+}
+
+.volume::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #F20574;
+    cursor: pointer;
+}
+
+#volume-value {
+    font-size: 14px;
+    color: #1BF2DD;
+}
