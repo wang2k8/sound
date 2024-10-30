@@ -14,7 +14,7 @@ const musicList = [
 // Khởi tạo các biến
 const musicListElement = document.getElementById('music-list');
 const audioPlayer = document.getElementById('audio-player');
-const nowPlaying = document.getElementById('now-playing');
+const nowPlaying = document.getElementById('track-title');
 const albumArt = document.getElementById('album-art');
 const playPauseButton = document.getElementById('play-pause-button');
 const progressBar = document.getElementById('progress-bar');
@@ -60,13 +60,13 @@ function loadTrack(index) {
 // Phát nhạc
 function playAudio() {
     audioPlayer.play();
-    playPauseButton.textContent = '⏸️'; // Chuyển đổi nút thành tạm dừng
+    playPauseButton.textContent = '❚❚'; // Chuyển đổi nút thành tạm dừng
 }
 
 // Tạm dừng nhạc
 function pauseAudio() {
     audioPlayer.pause();
-    playPauseButton.textContent = '▶️'; // Chuyển đổi nút thành phát
+    playPauseButton.textContent = '▶'; // Chuyển đổi nút thành phát
 }
 
 // Xử lý sự kiện phát/tạm dừng
@@ -81,7 +81,7 @@ playPauseButton.onclick = () => {
 // Cập nhật thanh tiến trình và thời gian
 audioPlayer.ontimeupdate = () => {
     const progressPercent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-    progressBar.value = progressPercent;
+    progressBar.value = isNaN(progressPercent) ? 0 : progressPercent; // Kiểm tra NaN
 
     // Cập nhật thời gian hiện tại
     const minutes = Math.floor(audioPlayer.currentTime / 60);
