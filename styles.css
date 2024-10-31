@@ -1,9 +1,22 @@
+/* Đặt font SVN-Gotham */
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./SVN-Gotham-Black.ttf') format('truetype');
+    font-weight: 900; /* Black */
+}
+
+@font-face {
+    font-family: 'SVN-Gotham';
+    src: url('./SVN-Gotham-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
 /* Đặt lại CSS cơ bản */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'SVN-Gotham', Arial, sans-serif;
 }
 
 body {
@@ -47,6 +60,7 @@ body {
     margin-bottom: 10px;
     font-size: 28px;
     color: #DC086A;
+    font-weight: bold; /* Sử dụng font SVN-Gotham Bold */
 }
 
 /* Thanh tìm kiếm và sắp xếp */
@@ -58,6 +72,7 @@ body {
     border-radius: 4px;
     background-color: #131226;
     color: #ecf0f1;
+    font-weight: normal;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 #search-bar:focus, #sort-options:focus {
@@ -139,7 +154,7 @@ body {
 }
 .track-title {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 900; /* Sử dụng font SVN-Gotham Black */
     color: #DC086A;
 }
 
