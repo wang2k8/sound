@@ -6,103 +6,103 @@
     font-family: Arial, sans-serif;
 }
 
-/* Định dạng phần chứa */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131226;
+    color: #ecf0f1;
+    filter: grayscale(10%);
+}
+
+/* Phần chứa tổng thể */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #2c3e50;
+    background: linear-gradient(145deg, #073575, #131226);
     color: #ecf0f1;
-    min-height: 100vh;
+    min-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 /* Phần danh sách nhạc */
 .music-list {
     width: 100%;
     max-width: 400px;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .music-list h2 {
     margin-bottom: 10px;
     font-size: 28px;
-    color: #e74c3c; /* Đỏ son */
+    color: #DC086A;
 }
 
 /* Thanh tìm kiếm và sắp xếp */
-#search-bar {
+#search-bar, #sort-options {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid #e74c3c; /* Đỏ son */
+    border: 2px solid #DC086A;
     border-radius: 4px;
-    background-color: #34495e;
+    background-color: #131226;
     color: #ecf0f1;
-    transition: border 0.3s;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-#search-bar:focus {
-    border-color: #1abc9c; /* Màu xanh lá khi được chọn */
-    outline: none;
-}
-
-#sort-options {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 2px solid #e74c3c; /* Đỏ son */
-    border-radius: 4px;
-    background-color: #34495e;
-    color: #ecf0f1;
+#search-bar:focus, #sort-options:focus {
+    border-color: #3392EF;
+    box-shadow: 0 0 8px #3392EF;
 }
 
 /* Hộp chứa danh sách nhạc */
 .music-box {
     max-height: 130px;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #34495e #2c3e50;
-    background-color: #34495e;
+    background-color: #131226;
     border-radius: 4px;
-    padding: 10px;
 }
 
 /* Tùy chỉnh thanh cuộn */
 .music-box::-webkit-scrollbar {
     width: 8px;
 }
-
 .music-box::-webkit-scrollbar-thumb {
-    background-color: #e74c3c; /* Đỏ son */
+    background-color: #DC086A;
     border-radius: 4px;
 }
-
 .music-box::-webkit-scrollbar-track {
-    background-color: #2c3e50;
+    background-color: #073575;
 }
 
 /* Danh sách các bài nhạc */
 #music-list {
-    max-height: 120px;
-    overflow-y: auto;
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 10px 0;
 }
-
 #music-list li {
     padding: 10px;
     cursor: pointer;
     color: #ecf0f1;
     transition: background 0.3s, transform 0.2s;
     border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
 }
-
 #music-list li:hover {
-    background-color: #e74c3c; /* Đỏ son */
-    transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
+    background-color: #DC086A;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #DC086A;
 }
 
 /* Phần trình phát nhạc */
@@ -111,33 +111,36 @@
     max-width: 400px;
     text-align: center;
     padding: 20px;
-    background-color: #34495e;
+    background-color: #073575;
     border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+.player:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Ảnh bìa album */
 .album-art {
     width: 150px;
     height: 150px;
-    background-color: #2c3e50;
+    background-color: #131226;
     margin: 0 auto 20px;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
-    border: 2px solid #e74c3c; /* Đỏ son */
+    border: 2px solid #DC086A;
+    box-shadow: 0 0 8px #DC086A;
 }
 
 /* Thông tin bài nhạc */
 .track-info {
     margin-bottom: 15px;
 }
-
 .track-title {
     font-size: 20px;
     font-weight: bold;
-    color: #e74c3c; /* Đỏ son */
+    color: #DC086A;
 }
 
 /* Nút điều khiển */
@@ -151,19 +154,28 @@
 .button {
     padding: 10px;
     font-size: 18px;
-    background-color: #1abc9c; /* Màu xanh lá */
+    background-color: #3392EF;
     border: none;
     border-radius: 50%;
     color: #ecf0f1;
     cursor: pointer;
     width: 50px;
     height: 50px;
-    transition: background 0.3s, transform 0.2s; /* Thêm hiệu ứng khi nhấn */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.button:hover {
+    background-color: #073575;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #3392EF;
 }
 
-.button:hover {
-    background-color: #16a085; /* Màu xanh đậm hơn khi hover */
-    transform: scale(1.1); /* Tăng kích thước khi hover */
+/* Nút quay lại và chuyển tiếp */
+#prev-track-button, #next-track-button {
+    background-color: #CA397B;
+}
+#prev-track-button:hover, #next-track-button:hover {
+    background-color: #073575;
+    box-shadow: 0 0 8px #CA397B;
 }
 
 /* Thanh tiến trình phát nhạc */
@@ -179,18 +191,16 @@
     appearance: none;
     width: 100%;
     height: 6px;
-    background-color: #2c3e50;
+    background-color: #131226;
     border-radius: 4px;
     outline: none;
-    transition: background 0.3s;
 }
-
 .progress::-webkit-slider-thumb {
     appearance: none;
-    width: 12px; /* Tăng kích thước nút kéo */
+    width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #e74c3c; /* Đỏ son */
+    background-color: #DC086A;
     cursor: pointer;
 }
 
@@ -212,21 +222,30 @@
     appearance: none;
     width: 100%;
     height: 6px;
-    background-color: #2c3e50;
+    background-color: #131226;
     border-radius: 4px;
     outline: none;
 }
-
 .volume::-webkit-slider-thumb {
     appearance: none;
-    width: 12px; /* Tăng kích thước nút kéo */
+    width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #e74c3c; /* Đỏ son */
+    background-color: #DC086A;
     cursor: pointer;
 }
 
 #volume-value {
     font-size: 14px;
     color: #bdc3c7;
+}
+
+/* Hiệu ứng @keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
