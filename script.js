@@ -8,6 +8,7 @@ const musicList = [
     { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pichehe.png" },
     { title: "[DUCBUI REMIX] ÔI MẤT RÌU", src: "music/[DUCBUI REMIX] ÔI MẤT RÌU (2).mp3", cover: "pic/de-tao-tien-may-ve-voi-dat-cam-riu.jpg" },
     { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
+    { title: "NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX )", src: "music/NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX ).mp3", cover: "pic/gojo-satoru-walking.gif" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
@@ -24,6 +25,8 @@ const currentTimeDisplay = document.getElementById('current-time');
 const volumeValueDisplay = document.getElementById('volume-value');
 const rewindButton = document.getElementById('rewind-button');
 const fastForwardButton = document.getElementById('fast-forward-button');
+const prevTrackButton = document.getElementById('prev-track-button');
+const nextTrackButton = document.getElementById('next-track-button');
 
 let currentTrackIndex = -1;
 
@@ -121,6 +124,18 @@ fastForwardButton.onclick = () => {
 // Tự động phát bài nhạc tiếp theo
 audioPlayer.onended = () => {
     currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
+    loadTrack(currentTrackIndex);
+};
+
+// Chuyển đến bài nhạc tiếp theo
+nextTrackButton.onclick = () => {
+    currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
+    loadTrack(currentTrackIndex);
+};
+
+// Quay lại bài nhạc trước
+prevTrackButton.onclick = () => {
+    currentTrackIndex = (currentTrackIndex - 1 + musicList.length) % musicList.length;
     loadTrack(currentTrackIndex);
 };
 
