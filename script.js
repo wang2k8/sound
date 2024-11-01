@@ -27,8 +27,10 @@ const rewindButton = document.getElementById('rewind-button');
 const fastForwardButton = document.getElementById('fast-forward-button');
 const prevTrackButton = document.getElementById('prev-track-button');
 const nextTrackButton = document.getElementById('next-track-button');
+const favoriteButton = document.getElementById('favorite-button');
 
 let currentTrackIndex = -1;
+let favoriteTracks = [];
 
 // Tạo danh sách bài nhạc
 function displayMusicList(musicArray) {
@@ -37,6 +39,10 @@ function displayMusicList(musicArray) {
         const li = document.createElement('li');
         li.textContent = music.title;
         li.onclick = () => loadTrack(index);
+        const favoriteHeart = document.createElement('span');
+        favoriteHeart.classList.add('heart-icon');
+        favoriteHeart.textContent = favoriteTracks.includes(index) ? '❤️' : '🤍'; // Màu tim
+        li.appendChild(favoriteHeart);
         musicListElement.appendChild(li);
     });
 }
@@ -123,20 +129,48 @@ fastForwardButton.onclick = () => {
 
 // Tự động phát bài nhạc tiếp theo
 audioPlayer.onended = () => {
-    currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
-    loadTrack(currentTrackIndex);
+    if (favoriteTracks.length > 0) {
+        currentTrackIndex = (currentTrackIndex + 1) % favoriteTracks.length;
+        loadTrack(favoriteTracks[currentTrackIndex]);
+    } else {
+        currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
+        loadTrack(currentTrackIndex);
+    }
 };
 
 // Chuyển đến bài nhạc tiếp theo
 nextTrackButton.onclick = () => {
-    currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
-    loadTrack(currentTrackIndex);
+    if (favoriteTracks.length > 0) {
+        currentTrackIndex = (currentTrackIndex + 1) % favoriteTracks.length;
+        loadTrack(favoriteTracks[currentTrackIndex]);
+    } else {
+        currentTrackIndex = (currentTrackIndex + 1) % musicList.length;
+        loadTrack(currentTrackIndex);
+    }
 };
 
 // Quay lại bài nhạc trước
 prevTrackButton.onclick = () => {
-    currentTrackIndex = (currentTrackIndex - 1 + musicList.length) % musicList.length;
-    loadTrack(currentTrackIndex);
+    if (favoriteTracks.length > 0) {
+        currentTrackIndex = (currentTrackIndex - 1 + favoriteTracks.length) % favoriteTracks.length;
+        loadTrack(favoriteTracks[currentTrackIndex]);
+    } else {
+        currentTrackIndex = (currentTrackIndex - 1 + musicList.length) % musicList.length;
+        loadTrack(currentTrackIndex);
+    }
+};
+
+// Chức năng thêm bài nhạc vào danh sách yêu thích
+favoriteButton.onclick = () => {
+    const currentIndex = currentTrackIndex;
+    if (favoriteTracks.includes(currentIndex)) {
+        favoriteTracks = favoriteTracks.filter(index => index !== currentIndex); // Xóa khỏi danh sách yêu thích
+        favoriteButton.querySelector('.heart-icon').textContent = '🤍'; // Đổi màu tim
+    } else {
+        favoriteTracks.push(currentIndex); // Thêm vào danh sách yêu thích
+        favoriteButton.querySelector('.heart-icon').textContent = '❤️'; // Đổi màu tim
+    }
+    displayMusicList(musicList); // Cập nhật danh sách nhạc hiển thị
 };
 
 // Tải bài nhạc đầu tiên khi trang được tải
