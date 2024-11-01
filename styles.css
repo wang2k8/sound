@@ -36,12 +36,12 @@ body {
     align-items: center;
     padding: 20px;
     background: linear-gradient(145deg, #073575, #131226);
-    color: #ecf0f1;
     min-width: 100%;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .container:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
@@ -72,9 +72,9 @@ body {
     border-radius: 4px;
     background-color: #131226;
     color: #ecf0f1;
-    font-weight: normal;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 #search-bar:focus, #sort-options:focus {
     border-color: #3392EF;
     box-shadow: 0 0 8px #3392EF;
@@ -92,10 +92,12 @@ body {
 .music-box::-webkit-scrollbar {
     width: 8px;
 }
+
 .music-box::-webkit-scrollbar-thumb {
     background-color: #DC086A;
     border-radius: 4px;
 }
+
 .music-box::-webkit-scrollbar-track {
     background-color: #073575;
 }
@@ -106,6 +108,7 @@ body {
     padding: 0;
     margin: 10px 0;
 }
+
 #music-list li {
     padding: 10px;
     cursor: pointer;
@@ -114,10 +117,28 @@ body {
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.05);
 }
+
 #music-list li:hover {
     background-color: #DC086A;
     transform: scale(1.05);
     box-shadow: 0 0 8px #DC086A;
+}
+
+/* Nút phát danh sách yêu thích */
+#play-favorites {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #DC086A;
+    border: none;
+    border-radius: 4px;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#play-favorites:hover {
+    background-color: #CA397B;
+    transform: scale(1.05);
 }
 
 /* Phần trình phát nhạc */
@@ -131,6 +152,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
 }
+
 .player:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
@@ -152,10 +174,17 @@ body {
 .track-info {
     margin-bottom: 15px;
 }
+
 .track-title {
     font-size: 20px;
     font-weight: 900; /* Sử dụng font SVN-Gotham Black */
     color: #DC086A;
+}
+
+/* Thông tin bài đang phát */
+#now-playing {
+    font-size: 16px;
+    color: #bdc3c7;
 }
 
 /* Nút điều khiển */
@@ -178,6 +207,7 @@ body {
     height: 50px;
     transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
+
 .button:hover {
     background-color: #073575;
     transform: scale(1.1);
@@ -188,6 +218,7 @@ body {
 #prev-track-button, #next-track-button {
     background-color: #CA397B;
 }
+
 #prev-track-button:hover, #next-track-button:hover {
     background-color: #073575;
     box-shadow: 0 0 8px #CA397B;
@@ -210,6 +241,7 @@ body {
     border-radius: 4px;
     outline: none;
 }
+
 .progress::-webkit-slider-thumb {
     appearance: none;
     width: 12px;
@@ -241,6 +273,7 @@ body {
     border-radius: 4px;
     outline: none;
 }
+
 .volume::-webkit-slider-thumb {
     appearance: none;
     width: 12px;
