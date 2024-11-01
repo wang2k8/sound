@@ -10,8 +10,8 @@ const musicList = [
     { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
     { title: "NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX )", src: "music/NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX ).mp3", cover: "pic/gojo-satoru-walking.gif" },
     { title: "Bầu Trời Mới - Dức Tư Remix", src: "music/BAU-TROI-MOI-FULL.mp3", cover: "pic/1727843689942_640.jpg" },
-    { title: "Vì Anh Đâu Có Biết - DucBui Remix", src: "music/[DUCBUI REMIX] VÌ ANH ĐÂU CÓ BIẾT - MADIHU", cover: "pic/artworks-izbeARPFle4aJWRx-3LBxiQ-t500x500.jpg" },
-    { title: "Anh Là Ai - DucBui Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3", cover: "pic/avatars-hyy1ZQzCjsYY7boT-QSyPVg-t240x240.jpg" },
+    { title: "Vì Anh Đâu Có Biết - DucBui Remix", src: "music/[DUCBUI REMIX] VÌ ANH ĐÂU CÓ BIẾT - MADIHU.mp3", cover: "pic/artworks-izbeARPFle4aJWRx-3LBxiQ-t500x500.jpg" },
+    { title: "Anh Là Ai - DucBui Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3.mp3", cover: "pic/avatars-hyy1ZQzCjsYY7boT-QSyPVg-t240x240.jpg" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
