@@ -14,9 +14,9 @@
             <h2>Danh sách nhạc</h2>
             <input type="text" id="search-bar" placeholder="Tìm kiếm bài nhạc...">
             <select id="sort-options">
-                <option value="title">Sort by Title</option>
-                <option value="artist">Sort by Artist</option>
-                <option value="album">Sort by Album</option>
+                <option value="title">Sắp xếp theo tên</option>
+                <option value="artist">Sắp xếp theo nghệ sĩ</option>
+                <option value="album">Sắp xếp theo album</option>
             </select>
             <div class="music-box">
                 <ul id="music-list">
@@ -31,6 +31,9 @@
 
             <div class="track-info">
                 <div id="track-title" class="track-title">Tên bài hát</div>
+                <button id="favorite-button" class="favorite-button" aria-label="Thêm vào danh sách yêu thích">
+                    <span class="heart-icon">❤️</span>
+                </button>
             </div>
 
             <!-- Điều khiển phát nhạc -->
