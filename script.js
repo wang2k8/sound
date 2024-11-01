@@ -1,7 +1,7 @@
 // Danh sách bài nhạc
 const musicList = [
     { title: "Việt Nam Tôi - Anh Vu Remix", src: "music/Việt Nam Tôi - Anh Vu Remix.mp3", cover: "pic/picvn.png" },
-    { title: "Mama Boy - Anh Vu Remix", src: "music/Mama Boy Remix.mp3", cover: "pic/pic1.png" },
+    { title: "Mama Boy - Anh Vu Remix", src: "music/MAMA BOY - ANHVU REMIX.mp3", cover: "pic/pic1.png" },
     { title: "Mộng Yu-FT-CLME- DucTu Remix", src: "music/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
     { title: "Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn", src: "music/Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn.mp3", cover: "pic/pic4.png" },
     { title: "Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix)", src: "music/Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix).mp3", cover: "pic/pic5.png" },
@@ -9,6 +9,9 @@ const musicList = [
     { title: "[DUCBUI REMIX] ÔI MẤT RÌU", src: "music/[DUCBUI REMIX] ÔI MẤT RÌU (2).mp3", cover: "pic/de-tao-tien-may-ve-voi-dat-cam-riu.jpg" },
     { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
     { title: "NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX )", src: "music/NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX ).mp3", cover: "pic/gojo-satoru-walking.gif" },
+    { title: "Bầu Trời Mới - Dức Tư Remix", src: "music/BAU-TROI-MOI-FULL.mp3", cover: "pic/1727843689942_640.jpg" },
+    { title: "Vì Anh Đâu Có Biết - DucBui Remix", src: "music/[DUCBUI REMIX] VÌ ANH ĐÂU CÓ BIẾT - MADIHU", cover: "pic/artworks-izbeARPFle4aJWRx-3LBxiQ-t500x500.jpg" },
+    { title: "Anh Là Ai - DucBui Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3", cover: "pic/avatars-hyy1ZQzCjsYY7boT-QSyPVg-t240x240.jpg" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
