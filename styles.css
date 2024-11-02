@@ -34,9 +34,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px; /* Giảm padding cho thiết bị di động */
     width: 90%; /* Thay đổi width để giao diện không bị chật */
-    max-width: 600px; /* Giới hạn chiều rộng tối đa */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa cho điện thoại */
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -67,8 +67,7 @@ body {
 .album-art-container {
     position: relative;
     width: 100%;
-    max-width: 380px; /* Tăng kích thước lên 10% (từ 345px thành 380px) */
-    height: 380px; /* Đảm bảo tỷ lệ 1:1 */
+    height: 300px; /* Chiều cao cố định cho ảnh album */
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -113,14 +112,13 @@ body {
 /* Phần danh sách nhạc */
 .music-list {
     width: 100%;
-    max-width: 420px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .music-list h2 {
     margin-bottom: 10px;
-    font-size: 28px;
+    font-size: 24px; /* Kích thước tiêu đề nhỏ hơn cho điện thoại */
     color: #F20574;
     font-weight: bold;
 }
@@ -185,7 +183,6 @@ body {
 /* Phần trình phát nhạc */
 .player {
     width: 100%;
-    max-width: 420px;
     text-align: center;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -198,7 +195,7 @@ body {
 }
 
 .track-title {
-    font-size: 20px;
+    font-size: 20px; /* Kích thước tiêu đề bài hát nhỏ hơn */
     font-weight: 900;
     color: #F20574;
 }
@@ -217,8 +214,8 @@ body {
     border-radius: 50%;
     color: #ecf0f1;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 45px; /* Kích thước nút nhỏ hơn */
+    height: 45px;
     transition: background 0.2s;
     z-index: 1; /* Đảm bảo nút nằm trên cùng */
 }
@@ -296,12 +293,7 @@ body {
     }
 
     .music-list h2 {
-        font-size: 24px; /* Giảm kích thước tiêu đề */
-    }
-
-    .button {
-        width: 45px; /* Kích thước nút nhỏ hơn */
-        height: 45px;
+        font-size: 24px; /* Kích thước tiêu đề nhỏ hơn cho điện thoại */
     }
 
     .track-title {
