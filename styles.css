@@ -29,28 +29,23 @@ body {
     filter: grayscale(10%);
 }
 
-/* Phần chứa tổng thể */
+/* Phần chứa tổng thể với hiệu ứng kính */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(145deg, #073575, #131226);
-    min-width: 100%;
+    background: rgba(255, 255, 255, 0.1); /* màu nền trong suốt */
+    backdrop-filter: blur(10px); /* làm mờ nền phía sau */
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 /* Phần danh sách nhạc */
 .music-list {
     width: 100%;
-    max-width: 400px;
     text-align: center;
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-out;
@@ -60,7 +55,7 @@ body {
     margin-bottom: 10px;
     font-size: 28px;
     color: #DC086A;
-    font-weight: bold; /* Sử dụng font SVN-Gotham Bold */
+    font-weight: bold;
 }
 
 /* Thanh tìm kiếm và sắp xếp */
@@ -70,7 +65,7 @@ body {
     margin: 10px 0;
     border: 2px solid #DC086A;
     border-radius: 4px;
-    background-color: #131226;
+    background-color: rgba(255, 255, 255, 0.1); /* nền trong suốt */
     color: #ecf0f1;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -80,11 +75,12 @@ body {
     box-shadow: 0 0 8px #3392EF;
 }
 
-/* Hộp chứa danh sách nhạc */
+/* Hộp chứa danh sách nhạc với hiệu ứng kính */
 .music-box {
     max-height: 130px;
     overflow-y: auto;
-    background-color: #131226;
+    background: rgba(255, 255, 255, 0.1); /* màu nền trong suốt */
+    backdrop-filter: blur(10px); /* làm mờ nền phía sau */
     border-radius: 4px;
 }
 
@@ -141,32 +137,53 @@ body {
     transform: scale(1.05);
 }
 
-/* Phần trình phát nhạc */
+/* Phần trình phát nhạc với hiệu ứng kính */
 .player {
     width: 100%;
-    max-width: 400px;
     text-align: center;
     padding: 20px;
-    background-color: #073575;
+    background: rgba(255, 255, 255, 0.1); /* màu nền trong suốt */
+    backdrop-filter: blur(10px); /* làm mờ nền phía sau */
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
 }
 
-.player:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-/* Ảnh bìa album */
+/* Ảnh bìa album 1:1 với nút tim ở góc trên bên phải */
 .album-art {
-    width: 150px;
-    height: 150px;
+    position: relative;
+    width: 300px; /* Kích thước ảnh bìa */
+    height: 300px; /* Kích thước ảnh bìa */
     background-color: #131226;
     margin: 0 auto 20px;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
     border: 2px solid #DC086A;
+    box-shadow: 0 0 8px #DC086A;
+}
+
+/* Nút yêu thích trong ảnh bìa */
+.favorite-button {
+    position: absolute;
+    top: 10px; /* Căn lên góc trên bên phải của ảnh bìa */
+    right: 10px;
+    background-color: #DC086A;
+    border: none;
+    border-radius: 50%;
+    color: #ecf0f1;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.favorite-button:hover {
+    background-color: #CA397B;
+    transform: scale(1.1);
     box-shadow: 0 0 8px #DC086A;
 }
 
@@ -177,123 +194,61 @@ body {
 
 .track-title {
     font-size: 20px;
-    font-weight: 900; /* Sử dụng font SVN-Gotham Black */
+    font-weight: 900;
     color: #DC086A;
 }
 
-/* Thông tin bài đang phát */
 #now-playing {
-    font-size: 16px;
-    color: #bdc3c7;
+    font-size: 14px;
+    color: #9E9E9E;
 }
 
-/* Nút điều khiển */
+/* Các nút điều khiển */
 .controls {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
     margin-bottom: 15px;
 }
 
 .button {
-    padding: 10px;
-    font-size: 18px;
-    background-color: #3392EF;
+    background-color: #DC086A;
     border: none;
-    border-radius: 50%;
+    border-radius: 4px;
     color: #ecf0f1;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    padding: 10px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .button:hover {
-    background-color: #073575;
-    transform: scale(1.1);
-    box-shadow: 0 0 8px #3392EF;
-}
-
-/* Nút quay lại và chuyển tiếp */
-#prev-track-button, #next-track-button {
     background-color: #CA397B;
+    transform: scale(1.05);
 }
 
-#prev-track-button:hover, #next-track-button:hover {
-    background-color: #073575;
-    box-shadow: 0 0 8px #CA397B;
-}
-
-/* Thanh tiến trình phát nhạc */
+/* Thanh tiến độ */
 .progress-container {
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-bottom: 15px;
 }
 
-.progress {
-    flex-grow: 1;
-    appearance: none;
-    width: 100%;
-    height: 6px;
-    background-color: #131226;
-    border-radius: 4px;
-    outline: none;
-}
-
-.progress::-webkit-slider-thumb {
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #DC086A;
+#progress-bar {
+    flex: 1;
     cursor: pointer;
+    height: 5px;
+    background: #DC086A;
 }
 
-/* Hiển thị thời gian phát nhạc hiện tại */
-#current-time {
-    font-size: 14px;
-    color: #bdc3c7;
-}
-
-/* Thanh âm lượng */
+/* Âm lượng */
 .volume-container {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-.volume {
-    flex-grow: 1;
-    appearance: none;
-    width: 100%;
-    height: 6px;
-    background-color: #131226;
-    border-radius: 4px;
-    outline: none;
-}
-
-.volume::-webkit-slider-thumb {
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #DC086A;
+#volume-control {
+    flex: 1;
     cursor: pointer;
-}
-
-#volume-value {
-    font-size: 14px;
-    color: #bdc3c7;
-}
-
-/* Hiệu ứng @keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    height: 5px;
+    background: #DC086A;
 }
