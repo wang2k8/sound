@@ -34,19 +34,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5%; /* Sử dụng padding tỷ lệ phần trăm cho giao diện di động */
-    width: 90%; /* Chiều rộng tương đối */
-    max-width: 400px; /* Giới hạn chiều rộng tối đa cho điện thoại */
+    padding: 20px; /* Thay đổi padding để tăng không gian */
+    width: 80%; /* Chiều rộng lớn hơn cho máy tính */
+    max-width: 800px; /* Giới hạn chiều rộng tối đa cho máy tính */
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
 }
 
 .container:hover {
-    transform: scale(1.01);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Phần nền mờ */
@@ -59,7 +60,7 @@ body {
     background-size: cover;
     background-position: center;
     filter: blur(15px);
-    opacity: 0.5;
+    opacity: 0.4; /* Tăng độ trong suốt cho nền */
     z-index: -1;
 }
 
@@ -78,12 +79,12 @@ body {
 .album-art {
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
     border: 2px solid #F20574;
-    box-shadow: 0 0 8px #F20574;
+    box-shadow: 0 0 10px #F20574;
 }
 
 /* Nút trái tim ở góc trên bên phải */
@@ -91,10 +92,9 @@ body {
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 5vw; /* Kích thước nút tỷ lệ phần trăm */
-    height: 5vw;
-    max-width: 30px; /* Giới hạn kích thước tối đa */
-    background-color: #F20574;
+    width: 35px; /* Kích thước nút cố định */
+    height: 35px;
+    background-color: rgba(242, 5, 116, 0.8); /* Màu nền trong suốt */
     border: none;
     border-radius: 50%;
     color: #ecf0f1;
@@ -102,7 +102,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2vw; /* Kích thước chữ tỷ lệ phần trăm */
+    font-size: 20px; /* Kích thước chữ cố định */
     transition: background-color 0.3s;
     z-index: 1; /* Đảm bảo nút nằm trên cùng */
 }
@@ -120,7 +120,7 @@ body {
 
 .music-list h2 {
     margin-bottom: 10px;
-    font-size: 4vw; /* Kích thước tiêu đề tỷ lệ phần trăm */
+    font-size: 2.5rem; /* Kích thước tiêu đề cố định */
     color: #F20574;
     font-weight: bold;
 }
@@ -128,12 +128,13 @@ body {
 /* Thanh tìm kiếm và sắp xếp */
 #search-bar, #sort-options {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Tăng padding để tạo cảm giác thoải mái hơn */
     margin: 10px 0;
     border: 1px solid #F20574;
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 0.05);
     color: #ecf0f1;
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
 }
 
 #search-bar:focus, #sort-options:focus {
@@ -143,11 +144,12 @@ body {
 
 /* Hộp chứa danh sách nhạc */
 .music-box {
-    max-height: 150px;
+    max-height: 250px; /* Tăng chiều cao tối đa cho hộp nhạc */
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     padding: 10px;
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
 }
 
 .music-box::-webkit-scrollbar {
@@ -189,7 +191,8 @@ body {
     padding: 5%; /* Sử dụng padding tỷ lệ phần trăm */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
 }
 
 .track-info {
@@ -197,7 +200,7 @@ body {
 }
 
 .track-title {
-    font-size: 4vw; /* Kích thước tiêu đề bài hát tỷ lệ phần trăm */
+    font-size: 2.5rem; /* Kích thước tiêu đề bài hát cố định */
     font-weight: 900;
     color: #F20574;
 }
@@ -210,15 +213,14 @@ body {
 
 .button {
     padding: 10px;
-    font-size: 2vw; /* Kích thước nút tỷ lệ phần trăm */
+    font-size: 1.8rem; /* Kích thước nút cố định */
     background-color: #1BF2DD;
     border: none;
     border-radius: 50%;
     color: #ecf0f1;
     cursor: pointer;
-    width: 10vw; /* Kích thước nút tỷ lệ phần trăm */
-    height: 10vw;
-    max-width: 45px; /* Giới hạn kích thước tối đa */
+    width: 45px; /* Kích thước nút cố định */
+    height: 45px;
     transition: background 0.2s;
     z-index: 1; /* Đảm bảo nút nằm trên cùng */
 }
@@ -281,25 +283,4 @@ body {
     border-radius: 50%;
     background-color: #F20574;
     cursor: pointer;
-}
-
-#volume-value {
-    font-size: 14px;
-    color: #bdc3c7;
-}
-
-/* Media query cho thiết bị di động */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px; /* Giảm padding cho thiết bị nhỏ */
-        width: 95%; /* Thay đổi width để phù hợp với thiết bị nhỏ hơn */
-    }
-
-    .music-list h2 {
-        font-size: 5vw; /* Kích thước tiêu đề nhỏ hơn cho điện thoại */
-    }
-
-    .track-title {
-        font-size: 4vw; /* Kích thước tiêu đề bài hát nhỏ hơn */
-    }
 }
