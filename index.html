@@ -27,24 +27,26 @@
 
         <!-- Trình phát nhạc -->
         <section class="player" id="player-section">
-            <div class="album-art default" id="album-art"></div>
-
-            <div class="track-info">
-                <div id="track-title" class="track-title">Tên bài hát</div>
-                <button id="favorite-button" class="favorite-button" aria-label="Thêm vào danh sách yêu thích">
+            <div class="album-art-container">
+                <div class="album-art default" id="album-art"></div>
+                <button id="favorite-button" class="heart-button" aria-label="Thêm vào danh sách yêu thích">
                     <span class="heart-icon">🤍</span>
                 </button>
             </div>
 
+            <div class="track-info">
+                <div id="track-title" class="track-title">Tên bài hát</div>
+            </div>
+
             <!-- Điều khiển phát nhạc -->
-            <audio id="audio-player" autoplay></audio> <!-- Thêm autoplay -->
+            <audio id="audio-player" autoplay></audio>
 
             <div class="controls">
-                <button class="button" id="prev-track-button">◁|</button> <!-- Nút quay lại bài nhạc trước -->
-                <button class="button" id="rewind-button">◁◁</button> <!-- Nút tua lùi -->
-                <button class="button" id="play-pause-button">▶</button> <!-- Nút phát/tạm dừng -->
-                <button class="button" id="fast-forward-button">▷▷</button> <!-- Nút tua tới -->
-                <button class="button" id="next-track-button">|▷</button> <!-- Nút bài nhạc tiếp theo -->
+                <button class="button" id="prev-track-button">◁|</button>
+                <button class="button" id="rewind-button">◁◁</button>
+                <button class="button" id="play-pause-button">▶</button>
+                <button class="button" id="fast-forward-button">▷▷</button>
+                <button class="button" id="next-track-button">|▷</button>
             </div>
 
             <div class="progress-container">
