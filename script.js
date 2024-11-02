@@ -12,6 +12,10 @@ const musicList = [
     { title: "Bầu Trời Mới - Dức Tư Remix", src: "music/BAU-TROI-MOI-FULL.mp3", cover: "pic/1727843689942_640.jpg" },
     { title: "Vì Anh Đâu Có Biết - DucBui Remix", src: "music/[DUCBUI REMIX] VÌ ANH ĐÂU CÓ BIẾT - MADIHU.mp3", cover: "pic/artworks-izbeARPFle4aJWRx-3LBxiQ-t500x500.jpg" },
     { title: "Anh Là Ai - DucBui Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3.mp3", cover: "pic/avatars-hyy1ZQzCjsYY7boT-QSyPVg-t240x240.jpg" },
+    { title: "Vì Sao (Nam Con Remix)", src: "music/Vì Sao (Nam Con Remix).mp3", cover: "pic/618b0e8a974ab202ae03d2a106d34356.jpg" },
+    { title: "Nước Hoa (Nam Con Remix)", src: "music/Nước Hoa (Nam Con Remix) - Hoàng Tôn - Hot TikTok 2024 - Audio Lyrics Video.mp3", cover: "pic/hq720 (6).png" },
+    { title: "Là Anh (Vocal Việt) - Phạm Lịch Cover & Nam Con Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3.mp3", cover: "pic/a7e77718d5dc8486fa60db65496d3715.jpg" },
+    { title: "NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX", src: "music/NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX (HOT TREND TIKTOK 2024).mp3", cover: "pic/1527737433466_640.jpg" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
