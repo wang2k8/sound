@@ -7,7 +7,7 @@ const musicList = [
     { title: "Mưa Tháng Sáu ft. Kissing On My Tatts - Nam Con Remix", src: "music/Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix).mp3", cover: "pic/pic5.png" },
     { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pichehe.png" },
     { title: "Ôi Mất Rìu - DucBui Remix", src: "music/[DUCBUI REMIX] ÔI MẤT RÌU (2).mp3", cover: "pic/de-tao-tien-may-ve-voi-dat-cam-riu.jpg" },
-    { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
+    { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANH VU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
     { title: "NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX )", src: "music/NẮNG CÓ MANG EM VỀ VER1 REMIX - SHARTNUSS FT TR.D & PHANKEO ( YANG REMIX ).mp3", cover: "pic/gojo-satoru-walking.gif" },
     { title: "Bầu Trời Mới - Đức Tư Remix", src: "music/BAU-TROI-MOI-FULL.mp3", cover: "pic/1727843689942_640.jpg" },
     { title: "Vì Anh Đâu Có Biết - DucBui Remix", src: "music/[DUCBUI REMIX] VÌ ANH ĐÂU CÓ BIẾT - MADIHU.mp3", cover: "pic/artworks-izbeARPFle4aJWRx-3LBxiQ-t500x500.jpg" },
