@@ -34,20 +34,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px; /* Thay đổi padding để tăng không gian */
-    width: 80%; /* Chiều rộng lớn hơn cho máy tính */
-    max-width: 800px; /* Giới hạn chiều rộng tối đa cho máy tính */
+    padding: 20px; /* Tăng padding cho khoảng cách tốt hơn */
+    width: 100%; /* Thay đổi width để giao diện rộng hơn */
+    max-width: 440px; /* Giới hạn chiều rộng tối đa cho điện thoại (tăng 10% từ 400px) */
+    height: 90vh; /* Đặt chiều cao cố định cho container */
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(255, 255, 255, 0.1); /* Thêm độ trong suốt */
+    backdrop-filter: blur(20px); /* Thêm hiệu ứng làm mờ nền */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     position: relative;
-}
-
-.container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
 }
 
 /* Phần nền mờ */
@@ -56,11 +52,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
     background-position: center;
     filter: blur(15px);
-    opacity: 0.4; /* Tăng độ trong suốt cho nền */
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -68,33 +64,36 @@ body {
 .album-art-container {
     position: relative;
     width: 100%;
-    height: auto; /* Chiều cao tự động cho ảnh album */
-    aspect-ratio: 1; /* Đảm bảo tỉ lệ 1:1 cho ảnh album */
-    margin-bottom: 20px;
+    height: 0; /* Đặt chiều cao về 0 để sử dụng padding-bottom cho tỷ lệ 1:1 */
+    padding-bottom: 100%; /* Thiết lập chiều cao dựa trên tỷ lệ 1:1 */
+    margin-bottom: 15px; /* Tăng khoảng cách */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .album-art {
+    position: absolute; /* Để ảnh bìa có thể phủ lên toàn bộ container */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
-    border: 2px solid #F20574;
-    box-shadow: 0 0 10px #F20574;
+    border: 3px solid #F20574; /* Tăng độ dày đường viền */
+    box-shadow: 0 0 12px #F20574; /* Tăng độ rõ của bóng */
 }
 
 /* Nút trái tim ở góc trên bên phải */
 .heart-button {
     position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 35px; /* Kích thước nút cố định */
+    top: 10px;
+    right: 10px;
+    width: 35px; /* Kích thước lớn hơn */
     height: 35px;
-    background-color: rgba(242, 5, 116, 0.8); /* Màu nền trong suốt */
+    background-color: rgba(242, 5, 116, 0.8); /* Thay đổi màu nền để có độ trong suốt */
     border: none;
     border-radius: 50%;
     color: #ecf0f1;
@@ -102,54 +101,57 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px; /* Kích thước chữ cố định */
-    transition: background-color 0.3s;
+    font-size: 20px; /* Kích thước chữ lớn hơn */
+    transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển động */
     z-index: 1; /* Đảm bảo nút nằm trên cùng */
+    backdrop-filter: blur(10px); /* Thêm hiệu ứng làm mờ nền phía sau */
 }
 
 .heart-button:hover {
-    background-color: #CA397B;
+    background-color: rgba(202, 57, 123, 0.9); /* Đổi màu khi hover với độ trong suốt */
+    transform: scale(1.1); /* Phóng to một chút khi hover */
 }
 
 /* Phần danh sách nhạc */
 .music-list {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Tăng khoảng cách giữa danh sách nhạc và phần khác */
 }
 
 .music-list h2 {
     margin-bottom: 10px;
-    font-size: 2.5rem; /* Kích thước tiêu đề cố định */
+    font-size: 26px; /* Kích thước tiêu đề lớn hơn */
     color: #F20574;
     font-weight: bold;
 }
 
 /* Thanh tìm kiếm và sắp xếp */
-#search-bar, #sort-options {
+#search-bar,
+#sort-options {
     width: 100%;
-    padding: 12px; /* Tăng padding để tạo cảm giác thoải mái hơn */
+    padding: 12px; /* Tăng padding */
     margin: 10px 0;
     border: 1px solid #F20574;
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 0.05);
     color: #ecf0f1;
-    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
 }
 
-#search-bar:focus, #sort-options:focus {
+#search-bar:focus,
+#sort-options:focus {
     border-color: #1BF2DD;
-    box-shadow: 0 0 8px rgba(27, 242, 221, 0.6);
+    box-shadow: 0 0 10px rgba(27, 242, 221, 0.6);
 }
 
 /* Hộp chứa danh sách nhạc */
 .music-box {
-    max-height: 250px; /* Tăng chiều cao tối đa cho hộp nhạc */
+    max-height: 120px; /* Giới hạn chiều cao cho danh sách nhạc */
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
-    padding: 10px;
-    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
+    padding: 12px; /* Tăng padding */
+    backdrop-filter: blur(10px); /* Thêm hiệu ứng làm mờ nền */
 }
 
 .music-box::-webkit-scrollbar {
@@ -172,115 +174,87 @@ body {
 }
 
 #music-list li {
-    padding: 10px;
+    padding: 12px; /* Tăng khoảng cách cho mỗi mục */
     cursor: pointer;
     color: #ecf0f1;
-    transition: background 0.2s;
+    transition: background 0.3s, transform 0.3s;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.05);
 }
 
 #music-list li:hover {
-    background-color: #F20574;
+    background-color: rgba(242, 5, 116, 0.8); /* Đổi màu khi hover với độ trong suốt */
+    transform: scale(1.02); /* Thêm hiệu ứng phóng to nhẹ khi hover */
 }
 
 /* Phần trình phát nhạc */
 .player {
     width: 100%;
     text-align: center;
-    padding: 5%; /* Sử dụng padding tỷ lệ phần trăm */
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px; /* Tăng padding */
+    background-color: rgba(255, 255, 255, 0.15); /* Tăng độ trong suốt */
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px); /* Hiệu ứng mờ phía sau */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Tăng độ rõ của bóng */
 }
 
-.track-info {
-    margin-bottom: 15px;
-}
-
-.track-title {
-    font-size: 2.5rem; /* Kích thước tiêu đề bài hát cố định */
-    font-weight: 900;
-    color: #F20574;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
+/* Nút điều khiển nhạc */
 .button {
-    padding: 10px;
-    font-size: 1.8rem; /* Kích thước nút cố định */
-    background-color: #1BF2DD;
+    padding: 12px; /* Tăng padding */
+    font-size: 18px; /* Kích thước nút lớn hơn */
+    background-color: rgba(27, 242, 221, 0.8); /* Đổi màu nền để có độ trong suốt */
     border: none;
     border-radius: 50%;
     color: #ecf0f1;
     cursor: pointer;
-    width: 45px; /* Kích thước nút cố định */
-    height: 45px;
-    transition: background 0.2s;
+    width: 50px; /* Kích thước nút lớn hơn */
+    height: 50px;
+    transition: background 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển động */
     z-index: 1; /* Đảm bảo nút nằm trên cùng */
+    backdrop-filter: blur(10px); /* Thêm hiệu ứng làm mờ nền phía sau */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Thêm bóng cho nút */
 }
 
 .button:hover {
-    background-color: #073575;
+    background-color: rgba(7, 53, 117, 0.8); /* Đổi màu khi hover với độ trong suốt */
+    transform: scale(1.1); /* Phóng to một chút khi hover */
 }
 
 .progress-container {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .progress {
     flex-grow: 1;
     appearance: none;
     width: 100%;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
-    outline: none;
+    height: 8px; /* Độ dày của thanh tiến trình */
+    background-color: rgba(255, 255, 255, 0.2); /* Màu nền thanh tiến trình */
+    border-radius: 5px; /* Làm tròn góc thanh tiến trình */
 }
 
 .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
     appearance: none;
-    width: 12px;
-    height: 12px;
+    width: 16px; /* Kích thước nút điều khiển thanh tiến trình */
+    height: 16px;
     border-radius: 50%;
-    background-color: #F20574;
+    background-color: #F20574; /* Màu nút điều khiển */
     cursor: pointer;
 }
 
-#current-time {
-    font-size: 14px;
-    color: #bdc3c7;
-}
-
-.volume-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.volume {
-    flex-grow: 1;
-    appearance: none;
-    width: 100%;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
-    outline: none;
-}
-
-.volume::-webkit-slider-thumb {
-    appearance: none;
-    width: 12px;
-    height: 12px;
+.progress::-moz-range-thumb {
+    width: 16px; /* Kích thước nút điều khiển thanh tiến trình */
+    height: 16px;
     border-radius: 50%;
-    background-color: #F20574;
+    background-color: #F20574; /* Màu nút điều khiển */
     cursor: pointer;
+}
+
+/* Thời gian phát nhạc */
+.time {
+    color: #F20574;
+    font-weight: bold;
 }
