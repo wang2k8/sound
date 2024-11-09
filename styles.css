@@ -34,11 +34,27 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #1C1C1E;  /* Tương tự Apple Music */
+    background: url('./your-image.jpg') center/cover no-repeat; /* Chèn ảnh nền */
+    background-size: cover;  /* Đảm bảo ảnh phủ hết */
+    position: relative;
     border-radius: 10px;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;  /* Điều chỉnh max-width */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;  /* Đảm bảo phần ảnh nền không tràn ra ngoài */
+}
+
+/* Thêm lớp để tạo hiệu ứng blur và giảm opacity */
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25); /* Giảm opacity xuống 25% */
+    backdrop-filter: blur(10px);  /* Áp dụng hiệu ứng blur */
+    z-index: -1; /* Đảm bảo hiệu ứng được hiển thị phía sau nội dung */
 }
 
 /* Phần danh sách nhạc */
@@ -273,10 +289,28 @@ body {
     color: #b3b3b3;
 }
 
-/* Media Queries cho kích thước màn hình nhỏ */
-@media (max-width: 600px) {
+/* Media Queries cho các thiết bị nhỏ */
+@media (max-width: 768px) {
     .container {
+        max-width: 100%;
+        width: 100%;
         padding: 10px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .album-art {
+        width: 150px;
+        height: 150px;
+    }
+
+    .track-title {
+        font-size: 18px;
     }
 
     .button {
@@ -285,21 +319,11 @@ body {
         font-size: 18px;
     }
 
-    .album-art {
-        width: 200px;
-        height: 200px;
-    }
-
-    .track-title {
-        font-size: 20px;
-    }
-
-    .progress, .volume {
+    .progress {
         height: 6px;
     }
 
-    .progress::-webkit-slider-thumb, .volume::-webkit-slider-thumb {
-        width: 10px;
-        height: 10px;
+    #search-bar, #sort-options {
+        padding: 10px;
     }
 }
