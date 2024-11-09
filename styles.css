@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'SVN-Gotham';
     src: url('./SVN-Gotham-Black.ttf') format('truetype');
-    font-weight: 900; /* Black */
+    font-weight: 900;
 }
 
 @font-face {
@@ -24,9 +24,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #131226;
-    color: #ecf0f1;
-    filter: grayscale(10%);
+    background-color: #1C1C1E;  /* Nền tối giống Apple Music */
+    color: #ffffff;
 }
 
 /* Phần chứa tổng thể */
@@ -35,71 +34,64 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(145deg, #073575, #131226);
-    min-width: 100%;
+    background-color: #1C1C1E;  /* Tương tự Apple Music */
     border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Phần danh sách nhạc */
 .music-list {
     width: 100%;
-    max-width: 400px;
     text-align: center;
     margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .music-list h2 {
-    margin-bottom: 10px;
-    font-size: 28px;
-    color: #DC086A;
-    font-weight: bold; /* Sử dụng font SVN-Gotham Bold */
+    font-size: 24px;
+    color: #f1f1f1;
+    font-weight: bold;
 }
 
 /* Thanh tìm kiếm và sắp xếp */
 #search-bar, #sort-options {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
-    border: 2px solid #DC086A;
-    border-radius: 4px;
-    background-color: #131226;
-    color: #ecf0f1;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background-color: #2C2C2E;
+    color: #fff;
+    transition: border-color 0.3s ease;
 }
 
 #search-bar:focus, #sort-options:focus {
-    border-color: #3392EF;
-    box-shadow: 0 0 8px #3392EF;
+    border-color: #1E90FF; /* Màu xanh dương */
+    box-shadow: 0 0 5px #1E90FF;
 }
 
 /* Hộp chứa danh sách nhạc */
 .music-box {
     max-height: 130px;
     overflow-y: auto;
-    background-color: #131226;
-    border-radius: 4px;
+    background-color: #2C2C2E;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 /* Tùy chỉnh thanh cuộn */
 .music-box::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 .music-box::-webkit-scrollbar-thumb {
-    background-color: #DC086A;
-    border-radius: 4px;
+    background-color: #1E90FF;
+    border-radius: 3px;
 }
 
 .music-box::-webkit-scrollbar-track {
-    background-color: #073575;
+    background-color: #1C1C1E;
 }
 
 /* Danh sách các bài nhạc */
@@ -110,64 +102,57 @@ body {
 }
 
 #music-list li {
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    color: #ecf0f1;
+    color: #fff;
     transition: background 0.3s, transform 0.2s;
-    border-radius: 4px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
 }
 
 #music-list li:hover {
-    background-color: #DC086A;
+    background-color: #1E90FF;
     transform: scale(1.05);
-    box-shadow: 0 0 8px #DC086A;
 }
 
 /* Nút phát danh sách yêu thích */
 #play-favorites {
-    padding: 10px 15px;
+    padding: 12px 18px;
     font-size: 18px;
-    background-color: #DC086A;
+    background-color: #1E90FF; /* Màu xanh dương */
     border: none;
-    border-radius: 4px;
-    color: #ecf0f1;
+    border-radius: 50px;
+    color: #fff;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
 
 #play-favorites:hover {
-    background-color: #CA397B;
+    background-color: #1C86EE; /* Màu xanh dương đậm */
     transform: scale(1.05);
 }
 
 /* Phần trình phát nhạc */
 .player {
     width: 100%;
-    max-width: 400px;
     text-align: center;
     padding: 20px;
-    background-color: #073575;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-}
-
-.player:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    background-color: #2C2C2E;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Ảnh bìa album */
 .album-art {
-    width: 150px;
-    height: 150px;
-    background-color: #131226;
+    width: 250px;  /* Kích thước album art */
+    height: 250px; /* Kích thước album art */
+    background-color: #333;
     margin: 0 auto 20px;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
-    border: 2px solid #DC086A;
-    box-shadow: 0 0 8px #DC086A;
+    border: 2px solid #1E90FF; /* Màu xanh dương */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Thông tin bài nhạc */
@@ -176,52 +161,51 @@ body {
 }
 
 .track-title {
-    font-size: 20px;
-    font-weight: 900; /* Sử dụng font SVN-Gotham Black */
-    color: #DC086A;
+    font-size: 22px;
+    font-weight: 900;
+    color: #f1f1f1;
 }
 
 /* Thông tin bài đang phát */
 #now-playing {
-    font-size: 16px;
-    color: #bdc3c7;
+    font-size: 14px;
+    color: #b3b3b3;
 }
 
 /* Nút điều khiển */
 .controls {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .button {
-    padding: 10px;
-    font-size: 18px;
-    background-color: #3392EF;
+    padding: 12px;
+    font-size: 22px;
+    background-color: #1E90FF; /* Màu xanh dương */
     border: none;
     border-radius: 50%;
-    color: #ecf0f1;
+    color: #fff;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    width: 60px;
+    height: 60px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .button:hover {
-    background-color: #073575;
+    background-color: #1C86EE; /* Màu xanh dương đậm */
     transform: scale(1.1);
-    box-shadow: 0 0 8px #3392EF;
 }
 
 /* Nút quay lại và chuyển tiếp */
 #prev-track-button, #next-track-button {
-    background-color: #CA397B;
+    background-color: #f1f1f1;
+    color: #333;
 }
 
 #prev-track-button:hover, #next-track-button:hover {
-    background-color: #073575;
-    box-shadow: 0 0 8px #CA397B;
+    background-color: #e1e1e1;
 }
 
 /* Thanh tiến trình phát nhạc */
@@ -229,15 +213,15 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .progress {
     flex-grow: 1;
     appearance: none;
     width: 100%;
-    height: 6px;
-    background-color: #131226;
+    height: 8px;
+    background-color: #333;
     border-radius: 4px;
     outline: none;
 }
@@ -247,14 +231,14 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #DC086A;
+    background-color: #1E90FF; /* Màu xanh dương */
     cursor: pointer;
 }
 
 /* Hiển thị thời gian phát nhạc hiện tại */
 #current-time {
     font-size: 14px;
-    color: #bdc3c7;
+    color: #b3b3b3;
 }
 
 /* Thanh âm lượng */
@@ -262,14 +246,15 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .volume {
     flex-grow: 1;
     appearance: none;
     width: 100%;
-    height: 6px;
-    background-color: #131226;
+    height: 8px;
+    background-color: #333;
     border-radius: 4px;
     outline: none;
 }
@@ -279,21 +264,11 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #DC086A;
+    background-color: #1E90FF; /* Màu xanh dương */
     cursor: pointer;
 }
 
 #volume-value {
     font-size: 14px;
-    color: #bdc3c7;
-}
-
-/* Hiệu ứng @keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    color: #b3b3b3;
 }
