@@ -272,3 +272,34 @@ body {
     font-size: 14px;
     color: #b3b3b3;
 }
+
+/* Media Queries cho kích thước màn hình nhỏ */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .album-art {
+        width: 200px;
+        height: 200px;
+    }
+
+    .track-title {
+        font-size: 20px;
+    }
+
+    .progress, .volume {
+        height: 6px;
+    }
+
+    .progress::-webkit-slider-thumb, .volume::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+    }
+}
