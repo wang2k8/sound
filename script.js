@@ -14,7 +14,7 @@ const musicList = [
     { title: "Anh Là Ai - DucBui Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3.mp3", cover: "pic/avatars-hyy1ZQzCjsYY7boT-QSyPVg-t240x240.jpg" },
     { title: "Vì Sao (Nam Con Remix)", src: "music/Vì Sao (Nam Con Remix).mp3", cover: "pic/618b0e8a974ab202ae03d2a106d34356.jpg" },
     { title: "Nước Hoa (Nam Con Remix)", src: "music/Nước Hoa (Nam Con Remix) - Hoàng Tôn - Hot TikTok 2024 - Audio Lyrics Video.mp3", cover: "pic/hq720 (6).png" },
-    { title: "Là Anh (Vocal Việt) - Phạm Lịch Cover & Nam Con Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3.mp3", cover: "pic/a7e77718d5dc8486fa60db65496d3715.jpg" },
+    { title: "Là Anh (Vocal Việt) - Phạm Lịch Cover & Nam Con Remix", src: "music/Là Anh (Vocal Việt) - Phạm Lịch Cover & Nam Con Remix - Nhạc Hot Tik Tok 2023 - Exclusive Music.mp3", cover: "pic/a7e77718d5dc8486fa60db65496d3715.jpg" },
     { title: "NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX", src: "music/NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX (HOT TREND TIKTOK 2024).mp3", cover: "pic/1527737433466_640.jpg" },
     { title: "Sao Anh Chưa Về Nhà - (Danxi ft. khuynn. Remix)", src: "music/Sao Anh Chưa Về Nhà- - Amee ft. Ricky Star (Danxi ft. khuynn. Remix) Nhạc Hot Tiktok 2023 [AMV] (1).mp3", cover: "pic/EAmr-PAWsAEoiWR.jpg" },
     { title: "Chăm Hoa - SS x AM REMIX", src: "music/Chăm Hoa - SS x AM REMIX.mp3", cover: "pic/1109(3).png" },
