@@ -16,6 +16,9 @@ const musicList = [
     { title: "Nước Hoa (Nam Con Remix)", src: "music/Nước Hoa (Nam Con Remix) - Hoàng Tôn - Hot TikTok 2024 - Audio Lyrics Video.mp3", cover: "pic/hq720 (6).png" },
     { title: "Là Anh (Vocal Việt) - Phạm Lịch Cover & Nam Con Remix", src: "music/[DUCBUI REMIX] ANH LÀ AI - RAP VIỆT MÙA 3.mp3", cover: "pic/a7e77718d5dc8486fa60db65496d3715.jpg" },
     { title: "NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX", src: "music/NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX (HOT TREND TIKTOK 2024).mp3", cover: "pic/1527737433466_640.jpg" },
+    { title: "Sao Anh Chưa Về Nhà - (Danxi ft. khuynn. Remix)", src: "music/Sao Anh Chưa Về Nhà- - Amee ft. Ricky Star (Danxi ft. khuynn. Remix) Nhạc Hot Tiktok 2023 [AMV] (1).mp3", cover: "pic/EAmr-PAWsAEoiWR.jpg" },
+    { title: "Chăm Hoa - SS x AM REMIX", src: "music/Chăm Hoa - SS x AM REMIX.mp3", cover: "pic/1109(3).png" },
+    { title: "NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX", src: "music/NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX.mp3", cover: "pic/HD-wallpaper-gato-cat-cats-kitten-thumbnail.jpg" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
