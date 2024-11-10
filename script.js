@@ -4,7 +4,7 @@ const musicList = [
     { title: "Mama Boy - Anh Vu Remix", src: "music/MAMA BOY - ANHVU REMIX.mp3", cover: "pic/pic1.png" },
     { title: "Mộng Yu-FT-CLME- DucTu Remix", src: "music/MONG-YU-FT-CLME- DUCTU REMIX.mp3", cover: "pic/pic3.png" },
     { title: "Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn", src: "music/Cẩm Tú Cầu (Anh Khoa Remix) - Rayo x Huỳnh Văn.mp3", cover: "pic/pic4.png" },
-    { title: "Mưa Tháng Sáu ft. Kissing On My Tatts - Nam Con Remix", src: "music/Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix).mp3", cover: "pic/pic5.png" },
+    { title: "Mưa Tháng Sáu ft. Kissing On My Tatts - Nam Con Remix", src: "music/Mưa Tháng Sáu ft. Kissing On My Tatts (Nam Con Remix).mp3", cover: "pic/CatsPiano.gif" },
     { title: "BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX", src: "music/BÍCH THƯỢNG QUAN x VẠN SỰ TUỲ DUYÊN - THANH HƯNG FT ĐỨC TƯ REMIX.mp3", cover: "pic/pichehe.png" },
     { title: "Ôi Mất Rìu - DucBui Remix", src: "music/[DUCBUI REMIX] ÔI MẤT RÌU (2).mp3", cover: "pic/de-tao-tien-may-ve-voi-dat-cam-riu.jpg" },
     { title: "BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX", src: "music/BÁC ĐANG CÙNG CHÚNG CHÁU HÀNH QUÂN - ANHVU FT KOREANDEE REMIX.mp3", cover: "pic/ngay_cuoi_cung_cua_bac_2.png" },
@@ -18,7 +18,7 @@ const musicList = [
     { title: "NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX", src: "music/NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX (HOT TREND TIKTOK 2024).mp3", cover: "pic/1527737433466_640.jpg" },
     { title: "Sao Anh Chưa Về Nhà - (Danxi ft. khuynn. Remix)", src: "music/Sao Anh Chưa Về Nhà- - Amee ft. Ricky Star (Danxi ft. khuynn. Remix) Nhạc Hot Tiktok 2023 [AMV] (1).mp3", cover: "pic/EAmr-PAWsAEoiWR.jpg" },
     { title: "Chăm Hoa - SS x AM REMIX", src: "music/Chăm Hoa - SS x AM REMIX.mp3", cover: "pic/1109(3).png" },
-    { title: "NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX", src: "music/NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX.mp3", cover: "pic/HD-wallpaper-gato-cat-cats-kitten-thumbnail.jpg" },
+    { title: "NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX", src: "music/NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX.mp3", cover: "pic/cat-dancing-1s4jyv4yzyi7jm63.gif" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
