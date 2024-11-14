@@ -18,7 +18,11 @@ const musicList = [
     { title: "NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX", src: "music/NHẮM MẮT THẤY MÙA HÈ - NGUYÊN HÀ FT ĐỨC TƯ REMIX (HOT TREND TIKTOK 2024).mp3", cover: "pic/1527737433466_640.jpg" },
     { title: "Sao Anh Chưa Về Nhà - (Danxi ft. khuynn. Remix)", src: "music/Sao Anh Chưa Về Nhà- - Amee ft. Ricky Star (Danxi ft. khuynn. Remix) Nhạc Hot Tiktok 2023 [AMV] (1).mp3", cover: "pic/EAmr-PAWsAEoiWR.jpg" },
     { title: "Chăm Hoa - SS x AM REMIX", src: "music/Chăm Hoa - SS x AM REMIX.mp3", cover: "pic/1109(3).png" },
-    { title: "NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX", src: "music/NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX.mp3", cover: "pic/cat-dancing-1s4jyv4yzyi7jm63.gif" },
+    { title: "NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX", src: "music/NẾU BIẾT ĐÓ LÀ LẦN CUỐI X NHƯ ANH MƠ - TOANN REMIX.mp3", cover: "pic/cat-dance-rainbow-cat-dance.gif" },
+    { title: "Kém duyên (Toann Fix) - Quaniam x Rimi Remix", src: "music/Kém duyên (Toann Fix) - Quaniam x Rimi Remix.mp3", cover: "pic/Kém duyên (Toann Fix) - Quaniam x Rimi Remix.gif" },
+    { title: "Nơi Vực Nơi Trời -Huy PT Remix", src: "music/Nơi Vực Nơi Trời -Huy PT Remix.mp3", cover: "pic/Nơi Vực Nơi Trời -Huy PT Remix.jpg" },
+    { title: "Daydreams x Last Christmas Toann Remix", src: "music/Daydreams x Last Christmas Toann Remix.mp3", cover: "pic/Daydreams x Last Christmas Toann Remix.gif" },
+    { title: "Đau Từ Lúc Em Đi Remix-Air Remix (Style Huy PT)", src: "music/Đau Từ Lúc Em Đi Remix-Air Remix (Style Huy PT).mp3", cover: "pic/Đau Từ Lúc Em Đi Remix-Air Remix (Style Huy PT).gif" },
     // Thêm nhiều bài nhạc nếu cần
 ];
 
